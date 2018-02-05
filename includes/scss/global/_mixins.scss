@@ -1,0 +1,11 @@
+
+
+
+@mixin flex-parent($justify, $align, $wrap) 												{
+	display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap;
+};
+
+@mixin flex-children($amount) 																{
+	flex: 1 1 $amount;
+}
+
