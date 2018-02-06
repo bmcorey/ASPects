@@ -2,10 +2,42 @@
 
 
 @mixin flex-parent($justify, $align, $wrap) 												{
-	display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap;
+	display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; @content;
 };
 
 @mixin flex-children($amount) 																{
-	flex: 1 1 $amount;
+	flex: 1 1 $amount; @content; 
+}
+
+//Breakpoints
+@mixin breakpoint($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// GRID
+@mixin base/* ($by) */																			{ flex: 1 1 100%/* /($by) */; 
+	// @if $value = null {
+	// 	flex: 1 1 100%; 
+	// }
+}
+
+@mixin col-1 																				{ @include base; }
+@mixin col-2 																				{ @include base; 
+	@include breakpoint (tablet) 											{ @include base; }
 }
 
