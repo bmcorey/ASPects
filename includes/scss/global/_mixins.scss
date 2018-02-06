@@ -1,27 +1,25 @@
 
 
 
-@mixin flex-parent($justify, $align, $wrap) 												{
-	display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; @content;
-};
+@mixin flex-parent($justify, $align, $wrap)                     { display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; @content; }
 
-@mixin flex-children($amount) 																{
-	flex: 1 1 $amount; @content; 
+//@mixin flex-children ($amount)                                { flex: 1 1 $amount; @content' }
+@mixin flex-children($s, $m, $l, $xl, $xxl)                     { flex: 1 1 $s; @content;
+  @include breakpoint (phablet)                                 { flex: 1 1 $m;}
+  @include breakpoint (tablet)                                  { flex: 1 1 $l;} 
+  @include breakpoint (laptop)                                  { flex: 1 1 $xl;}
+  @include breakpoint (desktop)                                 { flex: 1 1 $xxl;}
 }
+
 
 //Breakpoints
 @mixin breakpoint($breakpoint) {
-  // Retrieves the value from the key
   $value: map-get($breakpoints, $breakpoint);
-
-  // If the key exists in the map
   @if $value != null {
-    // Prints a media query based on the value
     @media (min-width: $value) {
       @content;
     }
   }
-
   // If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
@@ -29,15 +27,13 @@
   }
 }
 
-// GRID
-@mixin base/* ($by) */																			{ flex: 1 1 100%/* /($by) */; 
-	// @if $value = null {
-	// 	flex: 1 1 100%; 
-	// }
-}
 
-@mixin col-1 																				{ @include base; }
-@mixin col-2 																				{ @include base; 
-	@include breakpoint (tablet) 											{ @include base; }
-}
+// GRID
+@mixin base                                           {  }
+
+
+@mixin col-1 																				  { @include base; }
+// @mixin col-2 																		  { @include base; 
+// 	@include breakpoint (tablet) 											{ @include base; }
+// }
 
