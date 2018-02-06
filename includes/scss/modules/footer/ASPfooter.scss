@@ -3,10 +3,9 @@
 section 														{ width: 100%; display: flex; 
 	.footer 													{ @include flex-parent(center, center, wrap); width: 100%;
 		> div 													{ 
-			@include exactly(3) 								{ @include flex-parent(center, center, wrap); @include flex-children(100%); 
-				&:first-child 									{ }
-				
-			}
+			@include exactly(3) 								{ @include flex-parent(center, center, wrap); @include flex-children(30%); background: red;}
+			@include exactly(4) 								{ @include flex-parent(center, center, wrap); @include flex-children(30%); background: yellow;}
+			@include exactly(5) 								{ @include flex-parent(center, center, wrap); @include flex-children(30%); background: green; }
 		}
 	}
 }
