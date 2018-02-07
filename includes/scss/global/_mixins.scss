@@ -1,15 +1,15 @@
 
 
 
-@mixin flex-parent($justify, $align, $wrap)                     { display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; @content; }
+@mixin flex-parent($justify, $align, $wrap)                     { display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; }
 
 //@mixin flex-children ($amount)                                { flex: 1 1 $amount; @content' }
-@mixin flex-children($s, $m, $l, $xl, $xxl)                     { flex: 1 1 $s; @content;
-  @include breakpoint (phablet)                                 { flex: 1 1 $m;}
-  @include breakpoint (tablet)                                  { flex: 1 1 $l;} 
-  @include breakpoint (laptop)                                  { flex: 1 1 $xl;}
-  @include breakpoint (desktop)                                 { flex: 1 1 $xxl;}
+@mixin flex-children($s, $m, $l)                                { flex: 1 1 $s;
+  @include breakpoint (tablet)                                  { flex: 1 1 $m;}
+  @include breakpoint (laptop)                                  { flex: 1 1 $l;} 
 }
+
+%flex-center                                                    { display: flex; align-items: center; justify-content: center; }
 
 
 //Breakpoints
@@ -29,11 +29,13 @@
 
 
 // GRID
-@mixin base                                           {  }
+
+//Parent tags
+@mixin row($just,$wrp)                                { @include flex-parent($just, center, $wrp); width: 100%; }
 
 
-@mixin col-1 																				  { @include base; }
-// @mixin col-2 																		  { @include base; 
-// 	@include breakpoint (tablet) 											{ @include base; }
-// }
+//Children tags
+@mixin col-1 																				  { @include flex-children(100%, 100%, 100%);  @extend %flex-center;  }
+@mixin col-2                                          { @include flex-children(100%, 50%, 50%); @extend %flex-center; }
+@mixin col-3                                          { @include flex-children(100%, 33%, 33%); @extend %flex-center; }
 
