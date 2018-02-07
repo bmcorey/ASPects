@@ -1,17 +1,4 @@
 
-
-
-@mixin flex-parent($justify, $align, $wrap)                     { display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; }
-
-//@mixin flex-children ($amount)                                { flex: 1 1 $amount; @content' }
-@mixin flex-children($s, $m, $l)                                { flex: 1 1 $s;
-  @include breakpoint (tablet)                                  { flex: 1 1 $m;}
-  @include breakpoint (laptop)                                  { flex: 1 1 $l;} 
-}
-
-%flex-center                                                    { display: flex; align-items: center; justify-content: center; }
-
-
 //Breakpoints
 @mixin breakpoint($breakpoint) {
   $value: map-get($breakpoints, $breakpoint);
@@ -26,16 +13,61 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Selectors
+//Select the X first elements
+@mixin first($num) {
+
+  @if $num == 1 {
+    &:first-child {
+      @content;
+    }
+  }
+
+  @else {
+    &:nth-child(-n + #{$num}) {
+      @content;
+    }
+  }
+}
+
+//Select the X last elements
+@mixin last($num) {
+   &:nth-last-child(-n + #{$num}) {
+    @content;
+  }
+}
+
+// Select the elements between the X, Y elements
+@mixin between($first,$last) {
+  &:nth-child(n+#{$first}):nth-child(-n+#{$last}) {
+    @content;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 // GRID
 
-//Parent tags
-@mixin row($just,$wrp)                                { @include flex-parent($just, center, $wrp); width: 100%; }
+//--UTILITIES
+@mixin flex-parent($justify, $align, $wrap)                     { display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; }
+
+@mixin flex-children($s, $m, $l)                                { flex: 1 1 $s;
+  @include breakpoint (tablet)                                  { flex: 1 1 $m;}
+  @include breakpoint (laptop)                                  { flex: 1 1 $l;} 
+}
+
+%flex-center                                                    { display: flex; align-items: center; justify-content: center; }
+
+//--PARENT TAGS
+@mixin row($just,$wrp)                                          { @include flex-parent($just, center, $wrp); width: 100%; }
 
 
-//Children tags
-@mixin col-1 																				  { @include flex-children(100%, 100%, 100%);  @extend %flex-center;  }
-@mixin col-2                                          { @include flex-children(100%, 50%, 50%); @extend %flex-center; }
-@mixin col-3                                          { @include flex-children(100%, 33%, 33%); @extend %flex-center; }
+//--CHILDREN TAGS
+@mixin col-1 																				            { @include flex-children(100%, 100%, 100%);  @extend %flex-center;  }
+@mixin col-2                                                    { @include flex-children(100%, 50%, 50%); @extend %flex-center; }
+@mixin col-3                                                    { @include flex-children(100%, 33%, 33%); @extend %flex-center; }
 
