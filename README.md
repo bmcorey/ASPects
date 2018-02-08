@@ -3,6 +3,7 @@
 ### DOCUMENTATION
 
 **ASPECTS v0.1**
+**Please, notice that *ASPECTS* is under development without an stable release**
 
 *ASPects on Alpha version* - MIT License
 
@@ -30,7 +31,7 @@ Copy/Download the *"ASPects"* directory and add it to you project, import to you
 
 	// $path -> path to the aspexts directory
 ```
-or the ASPects main SCSS to your main SCSS file to work with the ASPects standards:
+or the *ASPects* main SCSS to your main SCSS file to work with the ASPects standards:
 ```scss
 	@import "$path/ASPects/includes/scss/main"
 
