@@ -71,6 +71,21 @@ Here we have an example:
 	</section>
 ```
 
+We have the section, a container and five direct childs, three of them with the same class. In ASPECTS, doesn't matter which classes have you assigned to each element, is built working with DOM directly, leaving the freedom to use the classes with which you feel more confortable.
+
+In this case, we want to achieve a three column layout with two containers sharing half of the space, we will do the next:
+```scss
+section 														{ width: 100%; display: flex; 
+	.footer 													{ @include row(center, wrap); 
+		> div 													{ 
+			@include exactly(5) 								{ @include col-2; background: green;
+				 @include first(3)  							{ @include col-3; }
+			}
+		}
+	}
+}
+```
+
 #### 4.- Collaborators
 
 * *ASP TEAM*
