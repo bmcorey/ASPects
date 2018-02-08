@@ -1,9 +1,9 @@
 .test1 															{ width: 100%; display: flex; 
 	> div 														{ width: 100%; 
 		> ul 													{ @include flex-parent(center, center, nowrap); width: 100%;
-			> li:first-child 									{ @include col-1; }
-			> li:nth-child(2) 									{ @include col-1; } 
-			> li:last-child 									{ @include col-1; }
+			// > li:first-child 									{ @include col-(1); }
+			// > li:nth-child(2) 									{ @include col-(2); } 
+			// > li:last-child 									{ @include col-(3); }
 		}
 	}
 }

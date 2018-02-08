@@ -1,11 +1,12 @@
 
 
 section 														{ width: 100%; display: flex; 
-	.footer 													{ @include flex-parent(center, center, wrap); width: 100%;
+	.footer 													{ @include row(center, wrap); 
 		> div 													{ 
-			@include exactly(3) 								{ @include flex-parent(center, center, wrap); @include flex-children(100%); 
-				&:first-child 									{ }
-				
+			@include exactly(3) 								{ @include col-1; background: red;}
+			@include exactly(4) 								{ @include col-2; background: yellow; }
+			@include exactly(5) 								{ @include col-2; background: green;
+				 @include first(3)  							{ @include col-3; }
 			}
 		}
 	}
