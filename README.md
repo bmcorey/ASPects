@@ -17,7 +17,7 @@
 
 #### 1.- How to install
 
-**For last stable verion**
+**For last stable version**
 Copy/Download the *"aspects"* directory and add it to you project, import to your main SCSS the file *"_aspects.scss"* 
 ```scss
 	@import "$path/aspects/_aspects"
