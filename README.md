@@ -22,7 +22,7 @@ Copy/Download the *"aspects"* directory and add it to you project, import to you
 ```scss
 	@import "$path/aspects/_aspects"
 
-	// $path -> path to the aspexts directory
+	// $path -> path to the aspects directory
 ```
 
 **For development version**
@@ -30,13 +30,13 @@ Copy/Download the *"ASPects"* directory and add it to you project, import to you
 ```scss
 	@import "$path/ASPects/includes/scss/imports"
 
-	// $path -> path to the aspexts directory
+	// $path -> path to the aspects directory
 ```
 or the *ASPects* main SCSS to your main SCSS file to work with the ASPects standards:
 ```scss
 	@import "$path/ASPects/includes/scss/main"
 
-	// $path -> path to the aspexts directory
+	// $path -> path to the aspects directory
 ```
 
 #### 2.- Dependencies
