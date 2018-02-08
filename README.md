@@ -16,18 +16,23 @@
 
 #### 2.- Dependencies
 
-*v0.1
-	*img
-	*includes
-	*index
-	*README
-	*gitignore
+* **v0.1**
+	* img 		-> Images for Readme.md
+	* includes
+		* framework 	-> *ASPECTS* ready to use
+		* global 		-> *ASPECTS* development
+		* modules 		-> *ASPECTS* Development tests
+		* imports.scss 	-> Imports file
+		* main.scss 	-> *ASPECTS* base styles for testing
+	* gitignore -> Files ignored by git
+	* README 	-> Read me document
+
 
 
 #### 3.- Usage
 
 In the alpha version, this tool is designed to take care about you grid layout while you can take care about the styles, using SCSS, allows to build 100% responsive & cross browser layouts.
-ASPECTS built above SASS mixins and SASS extends, intuitive and easy to use.
+*ASPECTS* built above SASS mixins and SASS extends, intuitive and easy to use.
 
 Here we have an example:
 ```html
@@ -77,7 +82,7 @@ Here we have an example:
 	</section>
 ```
 
-We have the section, a container and five direct childs, three of them with the same class. In ASPECTS, doesn't matter which classes have you assigned to each element, is built working with DOM directly, leaving the freedom to use the classes with which you feel more confortable.
+We have the section, a container and five direct childs, three of them with the same class. In *ASPECTS*, doesn't matter which classes have you assigned to each element, is built working with DOM directly, leaving the freedom to use the classes with which you feel more confortable.
 
 In this case, we want to achieve a three column layout with two containers sharing half of the space, we will do the next:
 ```scss
