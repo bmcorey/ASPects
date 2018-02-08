@@ -4,7 +4,7 @@
 
 **ASPECTS v0.1**
 
-**Please, notice that *ASPECTS* is under development without an stable release**
+**Please, notice that *ASPECTS* is under development without a stable release**
 
 *ASPects on Alpha version* - MIT License
 
