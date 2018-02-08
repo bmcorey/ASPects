@@ -160,5 +160,5 @@ And here we have the result:
 *_qq by Daniel Guillan and Borja Miralles*
 
 
-***APECTS is a grid system library created by Borja Miralles Gascon under MIT license***
+***APECTS is a SASS grid system library created by Borja Miralles Gascon under MIT license***
 
