@@ -28,14 +28,37 @@
   @include breakpoint (laptop)                                  { flex: 1 1 $l;} 
 }
 
-%flex-center                                                    { display: flex; align-items: center; justify-content: center; }
-
+%fl-center                                                      { display: flex; align-items: center; justify-content: center; }
+%fl-start                                                       { display: flex; align-items: center; justify-content: flex-start; }
+%fl-end                                                         { display: flex; align-items: center; justify-content: flex-end; }    
+  
 //--PARENT TAGS
 @mixin row($just,$wrp)                                          { @include flex-parent($just, center, $wrp); width: 100%; }
 
 
 //--CHILDREN TAGS
-@mixin col-1 																				            { @include flex-children(100%, 100%, 100%);  @extend %flex-center;  }
-@mixin col-2                                                    { @include flex-children(100%, 47%, 47%); @extend %flex-center; }
-@mixin col-3                                                    { @include flex-children(100%, 33%, 33%); @extend %flex-center; }
+// Easy columns
+@mixin col-1                                                    { @include flex-children( 100%, 100%, 100% ); @extend %fl-center; }
+@mixin col-2                                                    { @include flex-children( 100%, 47%, 47% ); @extend %fl-center; }
+@mixin col-3                                                    { @include flex-children( 100%, 31%, 31% ); @extend %fl-center; }
+@mixin col-4                                                    { @include flex-children( 100%, 23%, 23% ); @extend %fl-center; }
+@mixin col-5                                                    { @include flex-children( 100%, 19%, 19% ); @extend %fl-center; }
+@mixin col-6                                                    { @include flex-children( 50%, 20%, 16% ); @extend %fl-center; }
+@mixin col-7                                                    { @include flex-children( 50%, 20%, 14% ); @extend %fl-center; }
+@mixin col-8                                                    { @include flex-children( 50%, 20%, 12% ); @extend %fl-center; }
+@mixin col-9                                                    { @include flex-children( 50%, 20%, 11% ); @extend %fl-center; }
+@mixin col-10                                                   { @include flex-children( 50%, 20%, 10% ); @extend %fl-center; }
+
+// Major columns
+@mixin col-m7                                                   { @include flex-children( 100%, 47%, 69% ); @extend %fl-center; }
+@mixin col-m6                                                   { @include flex-children( 100%, 74%, 74% ); @extend %fl-center; }
+@mixin col-m5                                                   { @include flex-childtren( 100%, 79%, 79% ); @extend %fl-center; }
+
+//Custom column
+@mixin col-c($s, $m, $l)                                        { @include flex-children($s, $m, $l); @extend %fl-center; }
+
+
+
+
+
 
