@@ -1,0 +1,19 @@
+
+// BREAKPOINTS 
+
+//== MEDIA QUERIES
+
+$breakpoint-mobile: 			320px;
+$breakpoint-phablet: 			600px;
+$breakpoint-tablet: 			768px;
+$breakpoint-laptop: 			1024px;
+$breakpoint-desktop: 			1280px;
+$breakpoint-desktop-large: 		1440px;
+
+$breakpoints: (
+  phablet: 			$breakpoint-phablet,
+  tablet: 			$breakpoint-tablet,
+  laptop: 			$breakpoint-laptop,
+  desktop: 			$breakpoint-desktop,
+  desktop-large: 	$breakpoint-desktop-large
+);

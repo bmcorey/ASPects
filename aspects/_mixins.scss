@@ -1,0 +1,41 @@
+
+//Breakpoints
+@mixin breakpoint($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// GRID
+
+//--UTILITIES
+@mixin flex-parent($justify, $align, $wrap)                     { display: flex; justify-content: $justify; align-items: $align; flex-wrap: $wrap; }
+
+@mixin flex-children($s, $m, $l)                                { flex: 1 1 $s;
+  @include breakpoint (tablet)                                  { flex: 1 1 $m;}
+  @include breakpoint (laptop)                                  { flex: 1 1 $l;} 
+}
+
+%flex-center                                                    { display: flex; align-items: center; justify-content: center; }
+
+//--PARENT TAGS
+@mixin row($just,$wrp)                                          { @include flex-parent($just, center, $wrp); width: 100%; }
+
+
+//--CHILDREN TAGS
+@mixin col-1 																				            { @include flex-children(100%, 100%, 100%);  @extend %flex-center;  }
+@mixin col-2                                                    { @include flex-children(100%, 47%, 47%); @extend %flex-center; }
+@mixin col-3                                                    { @include flex-children(100%, 33%, 33%); @extend %flex-center; }
+

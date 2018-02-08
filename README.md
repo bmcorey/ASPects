@@ -123,30 +123,22 @@ And here we have the result:
 ```
 **SELECTORS**
 ```scss
-
-
 	@include first($x)
-
 	//It will include the first X direct childs
 
 	@include between($x,$y)
-
 	//It will include for the X to the Y direct childs
 
 	@include last($x)
-
 	// It will include the X last direct childs
 
 	@include exactly($x)
-
 	// It will run when the selector will conatin exactly the X direct childs
 
 	@include at-least($x)
-
 	// It will run when the selector will conatin at least the X direct childs
 
 	@include as-most
-
 	// It will run when the selector will conatin at most the X direct childs
 
 ```
@@ -161,3 +153,10 @@ And here we have the result:
 	* Vincent Le Neindre
 	* Mattew Hilder
 	* Kelly Tester
+
+
+*Mixin breakpoint by Joao Guerreiro*
+*_qq by Daniel Guillan and Borja Miralles*
+
+***APECTS is a grid system library created by Borja Miralles Gascon under MIT license***
+
