@@ -46,8 +46,8 @@ or the *ASPects* main SCSS to your main SCSS file to work with the ASPects stand
 	* img 		-> Images for Readme.md
 	* includes
 		* framework 	-> *ASPECTS* ready to use
-		* global 		-> *ASPECTS* development
-		* modules 		-> *ASPECTS* Development tests
+		* global 	-> *ASPECTS* development
+		* modules 	-> *ASPECTS* Development tests
 		* imports.scss 	-> Imports file
 		* main.scss 	-> *ASPECTS* base styles for testing
 	* gitignore -> Files ignored by git
@@ -115,8 +115,8 @@ In this case, we want to achieve a three column layout with two containers shari
 section 							{ width: 100%; display: flex; 
 	.footer 						{ @include row(center, wrap); 
 		> div 						{ 
-			@include exactly(5) 	{ @include col-2; background: green;
-				 @include first(3)  { @include col-3; background: orange;}
+			@include exactly(5) 			{ @include col-2; background: green;
+				 @include first(3)  		{ @include col-3; background: orange;}
 			}
 		}
 	}
@@ -152,16 +152,16 @@ And here we have the result:
 	@include first($x) 			{ @content; }
 	//It will include the first X direct children
 
-	@include between($x,$y)		{ @content ;}
+	@include between($x,$y)			{ @content ;}
 	//It will include from the X to the Y direct children
 
 	@include last($x) 			{ @content; }
 	// It will include the X last direct children
 
-	@include exactly($x) 		{ @content; }
+	@include exactly($x) 			{ @content; }
 	// It will run when the selector contains exactly the X direct children
 
-	@include at-least($x) 		{ @content; }
+	@include at-least($x) 			{ @content; }
 	// It will run when the selector contains at least the X direct children
 
 	@include as-most 			{ @content; }
