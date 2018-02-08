@@ -85,7 +85,6 @@ section 						{ width: 100%; display: flex;
 		> div 					{ 
 			@include exactly(5) 		{ @include col-2; 
 				 @include first(3)  	{ @include col-3; }
->>>>>>> 2ef6f19bf2c2988f34d8e5367ef66792e71da144
 			}
 		}
 	}
