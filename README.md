@@ -18,10 +18,10 @@
 
 #### 4.- Collaborators
 
-*ASP TEAM*
-*Lily Bentley
-*Joao Guerreiro
-*Luke Sherrington
-*Vincent Le Neindre
-*Mattew Hilder
-*Kelly Tester
+* *ASP TEAM*
+	* Lily Bentley
+	* Joao Guerreiro
+	* Luke Sherrington
+	* Vincent Le Neindre
+	* Mattew Hilder
+	* Kelly Tester
