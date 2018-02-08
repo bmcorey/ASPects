@@ -206,3 +206,27 @@
         @content;
     }
 }
+
+
+//Select the X first elements
+@mixin first($num)                                              {
+
+  @if $num == 1 {
+    &:first-child                                               {
+      @content;
+    }
+  }
+
+  @else {
+    &:nth-child(-n + #{$num})                                   {
+      @content;
+    }
+  }
+}
+
+//Select the X last elements
+@mixin last($num)                                               {
+   &:nth-last-child(-n + #{$num})                               {
+    @content;
+  }
+}

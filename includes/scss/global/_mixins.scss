@@ -13,38 +13,6 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//Selectors
-//Select the X first elements
-@mixin first($num)                                              {
-
-  @if $num == 1 {
-    &:first-child                                               {
-      @content;
-    }
-  }
-
-  @else {
-    &:nth-child(-n + #{$num})                                   {
-      @content;
-    }
-  }
-}
-
-//Select the X last elements
-@mixin last($num)                                               {
-   &:nth-last-child(-n + #{$num})                               {
-    @content;
-  }
-}
-
-// Select the elements between the X, Y elements
-@mixin between($first,$last)                                    {
-  &:nth-child(n+#{$first}):nth-child(-n+#{$last})               {
-    @content;
-  }
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -9,6 +9,7 @@
 1. How to install
 2. Dependecies
 3. Usage
+	* Methods
 4. Thanks to
 
 
@@ -99,6 +100,57 @@ section 							{ width: 100%; display: flex;
 
 And here we have the result:
 ![Example Image](/img/test1.png)
+
+##### 3.1.- Methods
+*ASPECTS* has different methods to build the grid, for parents, children nodes and selectors:
+**PARENTS**
+```scss
+	@include row($x, $y)
+	
+	// row = father mixin
+	// X = justify-content
+	// Y = flex-wrap
+```
+**CHILDREN**
+```scss
+	@include col-$n
+
+	// col- -> children mixin
+	// $n -> Integrer, it will says how many room has the object, ex:
+	// col-1 = mobile = 1/1, tablet = 1/1, laptop = 1/1
+	// col-2 = mobile = 1/2, tablet = 1/2, laptop = 1/2
+	// col-3 = mobile = 1/3, tablet = 1/3, laptop = 1/3
+```
+**SELECTORS**
+```scss
+
+
+	@include first($x)
+
+	//It will include the first X direct childs
+
+	@include between($x,$y)
+
+	//It will include for the X to the Y direct childs
+
+	@include last($x)
+
+	// It will include the X last direct childs
+
+	@include exactly($x)
+
+	// It will run when the selector will conatin exactly the X direct childs
+
+	@include at-least($x)
+
+	// It will run when the selector will conatin at least the X direct childs
+
+	@include as-most
+
+	// It will run when the selector will conatin at most the X direct childs
+
+```
+
 
 #### 4.- Thanks to
 
