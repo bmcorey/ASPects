@@ -17,58 +17,59 @@
 #### 2.- Dependencies
 
 #### 3.- Usage
-	In the alpha version, this tool is designed to take care about you grid layout while you can take care about the styles, using SCSS, allows to build 100% responsive & cross browser layouts.
 
-	Is built above SASS mixins and SASS extends, intuitive and easy to use.
-	
-	Here we have an example:
+In the alpha version, this tool is designed to take care about you grid layout while you can take care about the styles, using SCSS, allows to build 100% responsive & cross browser layouts.
 
-	```html
-	<!-- THREE COLUMN FOOTER -->
-		<section class="three-column">
-			<div class="footer">
-				<div class="footer__panels">
-					<div class="panel">
-						<ul>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__panels">
-					<div class="panel">
-						<ul>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__panels">
-					<div class="panel">
-						<ul>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
-							<li>test</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__menu">
-					<a href="#" class="menu__link">This</a>
-					<a href="#" class="menu__link">is</a>
-					<a href="#" class="menu__link">a</a>
-					<a href="#" class="menu__link">test</a>
-				</div>
-				<div class="footer__showoff">
-					<a href="https://www.asp.com/exhibition-website" target="_blank">Exhibition Website by ASP</a></div>
+Is built above SASS mixins and SASS extends, intuitive and easy to use.
+
+Here we have an example:
+
+```html
+<!-- THREE COLUMN FOOTER -->
+	<section class="three-column">
+		<div class="footer">
+			<div class="footer__panels">
+				<div class="panel">
+					<ul>
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+					</ul>
 				</div>
 			</div>
-		</section>
-		```
+			<div class="footer__panels">
+				<div class="panel">
+					<ul>
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__panels">
+				<div class="panel">
+					<ul>
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+						<li>test</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__menu">
+				<a href="#" class="menu__link">This</a>
+				<a href="#" class="menu__link">is</a>
+				<a href="#" class="menu__link">a</a>
+				<a href="#" class="menu__link">test</a>
+			</div>
+			<div class="footer__showoff">
+				<a href="https://www.asp.com/exhibition-website" target="_blank">Exhibition Website by ASP</a></div>
+			</div>
+		</div>
+	</section>
+```
 
 #### 4.- Collaborators
 
