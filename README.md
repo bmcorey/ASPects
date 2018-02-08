@@ -9,7 +9,7 @@
 *ASPects on Alpha version* - MIT License
 
 1. How to install
-2. Dependecies
+2. Dependencies
 3. Usage
 	* Methods
 4. Thanks to
@@ -18,7 +18,7 @@
 #### 1.- How to install
 
 **For last stable version**
-Copy/Download the *"aspects"* directory and add it to you project, import to your main SCSS the file *"_aspects.scss"* 
+Copy/Download the *"aspects"* directory and add it to your project, import the file *"_aspects.scss"* to your main SCSS.
 ```scss
 	@import "$path/aspects/_aspects"
 
@@ -26,7 +26,7 @@ Copy/Download the *"aspects"* directory and add it to you project, import to you
 ```
 
 **For development version**
-Copy/Download the *"ASPects"* directory and add it to you project, import to your main SCSS the file *"imports.scss"*:
+Copy/Download the *"ASPects"* directory and add it to your project, import the file *"imports.scss"* to your main SCSS :
 ```scss
 	@import "$path/ASPects/includes/scss/imports"
 
@@ -57,8 +57,8 @@ or the *ASPects* main SCSS to your main SCSS file to work with the ASPects stand
 
 #### 3.- Usage
 
-In the alpha version, this tool is designed to take care about you grid layout while you can take care about the styles, using SCSS, allows to build 100% responsive & cross browser layouts.
-*ASPECTS* built above SASS mixins and SASS extends, intuitive and easy to use.
+In the alpha version, this tool is designed to take care about you grid layout while you can take care about the styles. Using SCSS, ASPects allows you to build 100% responsive & cross browser layouts.
+*ASPECTS*, built above SASS mixins and SASS extends, is intuitive and easy to use.
 
 Here we have an example:
 ```html
@@ -108,9 +108,9 @@ Here we have an example:
 	</section>
 ```
 
-We have the section, a container and five direct childs, three of them with the same class. In *ASPECTS*, doesn't matter which classes have you assigned to each element, is built working with the DOM tags/inheritance directly, leaving the freedom to use the classes with which you feel more confortable.
+We have the section, a container and five direct children, three of them with the same class. In *ASPECTS*, it doesn't matter which classes you have assigned to each element. It is built to work with the DOM tags/inheritance directly, leaving the freedom to use the classes with which you feel most comfortable.
 
-In this case, we want to achieve a three column layout with two containers sharing half of the space, we will do the next:
+In this case, we want to achieve a three column layout with two containers sharing half of the space. We will do this:
 ```scss
 section 							{ width: 100%; display: flex; 
 	.footer 						{ @include row(center, wrap); 
@@ -142,7 +142,7 @@ And here we have the result:
 	.selector 	{ @include col-$n, @content... }
 
 	// col- -> children mixin
-	// $n -> Integrer, it will says how many room has the object as 1/$n , ex:
+	// $n -> Integer, it will say how much room the object has, as 1/$n , ex:
 	// col-1 = mobile = 1/1, tablet = 1/1, laptop = 1/1
 	// col-2 = mobile = 1/2, tablet = 1/2, laptop = 1/2
 	// col-3 = mobile = 1/3, tablet = 1/3, laptop = 1/3
@@ -150,22 +150,22 @@ And here we have the result:
 **SELECTORS**
 ```scss
 	@include first($x) 			{ @content; }
-	//It will include the first X direct childs
+	//It will include the first X direct children
 
 	@include between($x,$y)		{ @content ;}
-	//It will include for the X to the Y direct childs
+	//It will include from the X to the Y direct children
 
 	@include last($x) 			{ @content; }
-	// It will include the X last direct childs
+	// It will include the X last direct children
 
 	@include exactly($x) 		{ @content; }
-	// It will run when the selector will conatin exactly the X direct childs
+	// It will run when the selector contains exactly the X direct children
 
 	@include at-least($x) 		{ @content; }
-	// It will run when the selector will conatin at least the X direct childs
+	// It will run when the selector contains at least the X direct children
 
 	@include as-most 			{ @content; }
-	// It will run when the selector will conatin at most the X direct childs
+	// It will run when the selector contains at most the X direct children
 
 ```
 
