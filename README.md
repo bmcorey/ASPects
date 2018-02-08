@@ -141,7 +141,7 @@ And here we have the result:
 	.selector 	{ @include col-$n, @content... }
 
 	// col- -> children mixin
-	// $n -> Integrer, it will says how many room has the object, ex:
+	// $n -> Integrer, it will says how many room has the object as 1/$n , ex:
 	// col-1 = mobile = 1/1, tablet = 1/1, laptop = 1/1
 	// col-2 = mobile = 1/2, tablet = 1/2, laptop = 1/2
 	// col-3 = mobile = 1/3, tablet = 1/3, laptop = 1/3
