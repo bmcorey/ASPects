@@ -1,4 +1,4 @@
-# ASPects
+# Aspects
 ## SCSS grid library
 ### DOCUMENTATION
 
@@ -6,7 +6,7 @@
 
 **Please, notice that *ASPECTS* is under development without a stable release**
 
-*ASPects on Alpha version* - MIT License
+*Aspects on Alpha version* - MIT License
 
 1. How to install
 2. Dependencies
