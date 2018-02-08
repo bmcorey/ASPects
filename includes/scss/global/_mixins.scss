@@ -59,3 +59,60 @@
 //Custom column
 @mixin col-c($s, $m, $l)                                        { @include flex-children($s, $m, $l); @extend %fl-center; }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//== RESPONSIVE GRID
+
+.gallery                          {
+  > .panel                        {
+    .m-galleries-list                   {
+      &__items                    { display: flex; flex-wrap: wrap; height: 300px;
+        .panel                    { background: red; position: relative;
+          &__header                 { text-align: left; padding-left: 20px; padding-top: 30px; text-transform: uppercase; font-weight: lighten; color: white; }
+          &__body                 {
+            p a                 { position: absolute; left: 20px; bottom: 20px; border: 1px solid white; text-transform: uppercase; }
+          }
+        }
+        .panel,
+        &__item                   { flex: 1 1 50%; margin: 0!important; padding: 0; border-radius: 0; width: unset; height: unset; height: 150px; 
+          &__image                { border: none; }
+          &:nth-child(n+5)            { display: none; }
+        }
+
+        @include breakpoint(phablet)        { height: 400px; 
+          .panel,
+          &__item                 { flex: 1 1 30%; height: 200px;
+            &:nth-child(n+5)          { display: block; }
+            &:nth-child(n+7)          { display: none; }
+          }
+        }
+
+        @include breakpoint (tablet)        { height: 450px; max-height: 450px!important;
+          .panel,
+          &__item                 { flex: 1 1 24%; height: 225px;
+            &:nth-child(n+7)          { display: block; }
+            &:nth-child(n+9)          { display: none; }
+          }
+        }
+
+        @include breakpoint (laptop)        { height: 450px; 
+          .panel,
+          &__item                 { flex: 1 1 17%; height: 225px;
+            &:nth-child(n+9)          { display: block; }
+            &:nth-child(n+11)           { display: none; }
+          }
+        }
+
+        @include breakpoint (desktop)         { height: 450px; 
+          .panel,
+          &__item                 { flex: 1 1 15%; height: 225px;
+            &:nth-child(n+11)           { display: block; }
+            &:nth-child(n+13)           { display: none; }
+          }
+        }
+      }
+    }
+    .m-galleries-list__pagination             { display: none; }
+  }
+}
+

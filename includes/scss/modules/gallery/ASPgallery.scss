@@ -1,0 +1,17 @@
+.gallery 																{
+	.panel 																{
+		&__header 														{}
+		&__body 														{
+			.js 														{
+				.m-galleries-list 										{
+					&__items 											{
+						&__item 										{
+							.panel 										{ min-width: 200px; min-height: 200px; border: 1px solid green; background: orange; }
+							&__image 									{ min-width: 200px; min-height: 200px; border: 1px solid green; background: red; }
+						}
+					}
+				}
+			}
+		}
+	}
+}
