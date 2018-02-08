@@ -15,9 +15,24 @@
 
 #### 1.- How to install
 
+**For last stable verion**
 Copy/Download the *"aspects"* directory and add it to you project, import to your main SCSS the file *"_aspects.scss"* 
 ```scss
 	@import "$path/aspects/_aspects"
+
+	// $path -> path to the aspexts directory
+```
+
+**For development version**
+Copy/Download the *"ASPects"* directory and add it to you project, import to your main SCSS the file *"imports.scss"*:
+```scss
+	@import "$path/ASPects/includes/scss/imports"
+
+	// $path -> path to the aspexts directory
+```
+or the ASPects main SCSS to your main SCSS file to work with the ASPects standards:
+```scss
+	@import "$path/ASPects/includes/scss/main"
 
 	// $path -> path to the aspexts directory
 ```
@@ -164,6 +179,7 @@ And here we have the result:
 
 
 *Mixin breakpoint by Joao Guerreiro*
+
 *_qq by Daniel Guillan and Borja Miralles*
 
 
