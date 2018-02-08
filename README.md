@@ -9,7 +9,7 @@
 1. How to install
 2. Dependecies
 3. Usage
-4. Supporters
+4. Thanks to
 
 
 #### 1.- How to install
@@ -73,11 +73,19 @@ We have the section, a container and five direct childs, three of them with the 
 
 In this case, we want to achieve a three column layout with two containers sharing half of the space, we will do the next:
 ```scss
+<<<<<<< HEAD
 section 							{ width: 100%; display: flex; 
 	.footer 						{ @include row(center, wrap); 
 		> div 						{ 
 			@include exactly(5) 	{ @include col-2; background: green;
 				 @include first(3)  { @include col-3; background: orange;}
+=======
+section 						{ width: 100%; display: flex; 
+	.footer 					{ @include row(center, wrap); 
+		> div 					{ 
+			@include exactly(5) 		{ @include col-2; 
+				 @include first(3)  	{ @include col-3; }
+>>>>>>> 2ef6f19bf2c2988f34d8e5367ef66792e71da144
 			}
 		}
 	}
@@ -87,7 +95,7 @@ section 							{ width: 100%; display: flex;
 And here we have the result:
 ![Example Image](/images/test1.png)
 
-#### 4.- Supporters
+#### 4.- Thanks to
 
 * *ASP TEAM*
 	* Lily Bentley
