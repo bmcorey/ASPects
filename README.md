@@ -16,6 +16,14 @@
 
 #### 2.- Dependencies
 
+*v0.1
+	*img
+	*includes
+	*index
+	*README
+	*gitignore
+
+
 #### 3.- Usage
 
 In the alpha version, this tool is designed to take care about you grid layout while you can take care about the styles, using SCSS, allows to build 100% responsive & cross browser layouts.
