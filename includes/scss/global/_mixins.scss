@@ -31,6 +31,8 @@
 %fl-center                                                      { display: flex; align-items: center; justify-content: center; }
 %fl-start                                                       { display: flex; align-items: center; justify-content: flex-start; }
 %fl-end                                                         { display: flex; align-items: center; justify-content: flex-end; }    
+%fl-col                                                         { flex-direction: column; }   
+
   
 //--PARENT TAGS
 @mixin row($just,$wrp)                                          { @include flex-parent($just, center, $wrp); width: 100%; }
