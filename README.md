@@ -92,7 +92,7 @@ section 						{ width: 100%; display: flex;
 ```
 
 And here we have the result:
-![Example Image](/images/test1.png)
+![Example Image](/img/test1.png)
 
 #### 4.- Thanks to
 
