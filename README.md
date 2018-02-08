@@ -73,18 +73,11 @@ We have the section, a container and five direct childs, three of them with the 
 
 In this case, we want to achieve a three column layout with two containers sharing half of the space, we will do the next:
 ```scss
-<<<<<<< HEAD
 section 							{ width: 100%; display: flex; 
 	.footer 						{ @include row(center, wrap); 
 		> div 						{ 
 			@include exactly(5) 	{ @include col-2; background: green;
 				 @include first(3)  { @include col-3; background: orange;}
-=======
-section 						{ width: 100%; display: flex; 
-	.footer 					{ @include row(center, wrap); 
-		> div 					{ 
-			@include exactly(5) 		{ @include col-2; 
-				 @include first(3)  	{ @include col-3; }
 			}
 		}
 	}
