@@ -15,9 +15,17 @@
 
 #### 1.- How to install
 
+Copy/Download the *"aspects"* directory and add it to you project, import to your main SCSS the file *"_aspects.scss"* 
+```scss
+	@import "$path/aspects/_aspects"
+
+	// $path -> path to the aspexts directory
+```
+
 #### 2.- Dependencies
 
 * **v0.1**
+	* aspects 	-> Last Version ready to use of *ASPECTS*
 	* img 		-> Images for Readme.md
 	* includes
 		* framework 	-> *ASPECTS* ready to use
