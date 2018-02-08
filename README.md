@@ -149,22 +149,22 @@ And here we have the result:
 ```
 **SELECTORS**
 ```scss
-	@include first($x) 			{ @content }
+	@include first($x) 			{ @content; }
 	//It will include the first X direct childs
 
-	@include between($x,$y)		{ @content }
+	@include between($x,$y)		{ @content ;}
 	//It will include for the X to the Y direct childs
 
-	@include last($x) 			{ @content }
+	@include last($x) 			{ @content; }
 	// It will include the X last direct childs
 
-	@include exactly($x) 		{ @content }
+	@include exactly($x) 		{ @content; }
 	// It will run when the selector will conatin exactly the X direct childs
 
-	@include at-least($x) 		{ @content }
+	@include at-least($x) 		{ @content; }
 	// It will run when the selector will conatin at least the X direct childs
 
-	@include as-most 			{ @content }
+	@include as-most 			{ @content; }
 	// It will run when the selector will conatin at most the X direct childs
 
 ```
