@@ -1,4 +1,4 @@
-.index.html
-.prepros-6.config
-.styles.css
-.styles.css.map
+*.index.html
+*.prepros-6.config
+*.styles.css
+*.styles.css.map
