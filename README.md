@@ -128,6 +128,7 @@ And here we have the result:
 
 ##### 3.1.- Methods
 *ASPECTS* has different methods to build the grid, for parents, children nodes and selectors:
+
 **PARENTS**
 ```scss
 	.selector 	{ @include row($x, $y), @content... }
