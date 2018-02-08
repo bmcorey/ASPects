@@ -130,7 +130,7 @@ And here we have the result:
 *ASPECTS* has different methods to build the grid, for parents, children nodes and selectors:
 **PARENTS**
 ```scss
-	@include row($x, $y)
+	.selector 	{ @include row($x, $y), @content... }
 	
 	// row = father mixin
 	// X = justify-content
@@ -138,7 +138,7 @@ And here we have the result:
 ```
 **CHILDREN**
 ```scss
-	@include col-$n
+	.selector 	{ @include col-$n, @content... }
 
 	// col- -> children mixin
 	// $n -> Integrer, it will says how many room has the object, ex:
@@ -148,22 +148,22 @@ And here we have the result:
 ```
 **SELECTORS**
 ```scss
-	@include first($x)
+	@include first($x) 			{ @content }
 	//It will include the first X direct childs
 
-	@include between($x,$y)
+	@include between($x,$y)		{ @content }
 	//It will include for the X to the Y direct childs
 
-	@include last($x)
+	@include last($x) 			{ @content }
 	// It will include the X last direct childs
 
-	@include exactly($x)
+	@include exactly($x) 		{ @content }
 	// It will run when the selector will conatin exactly the X direct childs
 
-	@include at-least($x)
+	@include at-least($x) 		{ @content }
 	// It will run when the selector will conatin at least the X direct childs
 
-	@include as-most
+	@include as-most 			{ @content }
 	// It will run when the selector will conatin at most the X direct childs
 
 ```
