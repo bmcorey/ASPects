@@ -5,9 +5,10 @@
 			.js 														{
 				.m-galleries-list 										{
 					&__items 											{
-						&__item 										{
-							.panel 										{ min-width: 200px; min-height: 200px; border: 1px solid green; background: orange; }
-							&__image 									{ min-width: 200px; min-height: 200px; border: 1px solid green; background: red; }
+						.panel 											{ min-width: 200px; max-height: 200px; min-height: 200px; border: 1px solid green; background: orange; }
+						&__item 										{ background: red;
+							&:nth-child(even) 							{ background: blue; }
+							&__image 									{ min-width: 200px; min-height: 200px; border: 1px solid green; }
 						}
 					}
 				}
