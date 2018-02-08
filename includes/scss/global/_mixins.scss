@@ -68,6 +68,6 @@
 
 //--CHILDREN TAGS
 @mixin col-1 																				            { @include flex-children(100%, 100%, 100%);  @extend %flex-center;  }
-@mixin col-2                                                    { @include flex-children(100%, 50%, 50%); @extend %flex-center; }
+@mixin col-2                                                    { @include flex-children(100%, 47%, 47%); @extend %flex-center; }
 @mixin col-3                                                    { @include flex-children(100%, 33%, 33%); @extend %flex-center; }
 

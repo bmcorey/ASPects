@@ -1,12 +1,12 @@
 
 
-section 														{ width: 100%; display: flex; 
+section 														{ width: 90%; display: flex; margin: 0 auto; 
 	.footer 													{ @include row(center, wrap); 
 		> div 													{ 
 			@include exactly(3) 								{ @include col-1; background: red;}
-			@include exactly(4) 								{ @include col-2; background: yellow; }
-			@include exactly(5) 								{ @include col-2; background: green;
-				 @include first(3)  							{ @include col-3; }
+			@include exactly(4) 								{ @include col-2; background: white; }
+			@include exactly(5) 								{ @include col-2; background: green; border: 1px solid black;
+				 @include first(3)  							{ @include col-3; background: orange; }
 			}
 		}
 	}

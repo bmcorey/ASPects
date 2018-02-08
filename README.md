@@ -9,7 +9,7 @@
 1. How to install
 2. Dependecies
 3. Usage
-4. Collaboratos
+4. Supporters
 
 
 #### 1.- How to install
@@ -76,15 +76,18 @@ In this case, we want to achieve a three column layout with two containers shari
 section 							{ width: 100%; display: flex; 
 	.footer 						{ @include row(center, wrap); 
 		> div 						{ 
-			@include exactly(5) 	{ @include col-2; 
-				 @include first(3)  { @include col-3; }
+			@include exactly(5) 	{ @include col-2; background: green;
+				 @include first(3)  { @include col-3; background: orange;}
 			}
 		}
 	}
 }
 ```
 
-#### 4.- Collaborators
+And here we have the result:
+![Example Image](/images/test1.png)
+
+#### 4.- Supporters
 
 * *ASP TEAM*
 	* Lily Bentley
