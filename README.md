@@ -76,7 +76,7 @@ In this case, we want to achieve a three column layout with two containers shari
 section 							{ width: 100%; display: flex; 
 	.footer 						{ @include row(center, wrap); 
 		> div 						{ 
-			@include exactly(5) 	{ @include col-2; background: green;
+			@include exactly(5) 	{ @include col-2; 
 				 @include first(3)  { @include col-3; }
 			}
 		}
