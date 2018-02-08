@@ -22,6 +22,7 @@
 	Is built above SASS mixins and SASS extends, intuitive and easy to use.
 	
 	Here we have an example:
+
 	```html
 	<!-- THREE COLUMN FOOTER -->
 		<section class="three-column">
@@ -66,7 +67,8 @@
 					<a href="https://www.asp.com/exhibition-website" target="_blank">Exhibition Website by ASP</a></div>
 				</div>
 			</div>
-		</section>```
+		</section>
+		```
 
 #### 4.- Collaborators
 
