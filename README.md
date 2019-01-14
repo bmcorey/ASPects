@@ -172,15 +172,6 @@ And here we have the result:
 
 #### 4.- Thanks to
 
-* *ASP TEAM*
-	* Lily Bentley
-	* Joao Guerreiro
-	* Luke Sherrington
-	* Vincent Le Neindre
-	* Mattew Hilder
-	* Kelly Tester
-
-
 *Mixin breakpoint by Joao Guerreiro*
 
 *_qq by Daniel Guillan and Borja Miralles*
